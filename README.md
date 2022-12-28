@@ -6,4 +6,4 @@ A simple calendar application that allow's users to save events for each hour of
 ##Screenshot
 ![Image](https://github.com/hqayumie/Challenge_5_Work_Day_Scheduler/blob/main/assets/images/3269F216-C573-456B-8B87-D018342AAF52.jpeg)
 
-<a href="https://hqayumie.github.io/Challenge_5_Work_Day_Scheduler/" target=_blank">Link
+<a href="https://hqayumie.github.io/Challenge_5_Work_Day_Scheduler/" target="_blank">Link
