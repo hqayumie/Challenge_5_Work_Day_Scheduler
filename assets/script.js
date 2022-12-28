@@ -6,7 +6,7 @@ const hours = $(".hour");
 const timeOfDayEl = parseInt(moment().format("H"));
 
 //function to check each hour block which is colour coded for past, present, future.
-$.each(hours, function (i, hour) {
+$.each(hours, function (_i, _hour) {
   let time = parseInt($(this).attr("id"));
   if (time === timeOfDayEl) {
     $(this).next().addClass("present");
@@ -15,15 +15,22 @@ $.each(hours, function (i, hour) {
   } else if (time > timeOfDayEl) {
     $(this).next().addClass("future");
   }
+
 });
 
-//Appointments(text area for agenda items), class = "event"; if Save button clicked, set item to local storage and continue
+
 
 $(".saveBtn").on("click", function (event) {
   let appointmets =
     event.target.parentElement.previousElementSibling.children[0].value;
   localStorage.setItem(event.target.attributes[0].value, appointmets);
 });
+
+
+
+
+//Appointments(text area for agenda items), class = "event"; if Save button clicked, set item to local storage and continue; upon refresh, need to get item from local storage too
+
 
 $(document).ready(function () {
   if (localStorage["900hr"] !== null && localStorage["900hr"] !== undefined) {
